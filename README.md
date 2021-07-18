@@ -1,5 +1,5 @@
 # First Steps in Domain-Driven Design - Python Solution
-![Build](https://github.com/andreipradan/first-steps-in-ddd-solutions-python/workflows/Build/badge.svg)
+![Build](https://github.com/andreipradan/first-steps-in-ddd-solutions-python/actions/workflows/build.yml/badge.svg)
 
 This is the starter project for the exercises in the "First Steps in Domain-Driven Design" course for O'Reilly.  If you are more of a Java person, take a look at the [Java version of this codebase](https://github.com/First-Steps-in-DDD-Community/first-steps-in-ddd-solutions/blob/main/README.md). If you prefer dotnet, take a look at the [C# version](https://github.com/First-Steps-in-DDD-Community/first-steps-in-ddd-solutions-dotnet/blob/main/README.md) (Thanks to @BAPostma for contributing this).
 
