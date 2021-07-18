@@ -18,7 +18,9 @@ class CriminalOffence(Enum):
     FALSE_EVIDENCE_BEFORE_EUROPEAN_COURT = "False evidence before European Court"
     FIRING_ON_REVENUE_VESSEL = "Firing on Revenue vessel"
     FRAUDULENT_EVASION_OF_AGRICULTURAL_LEVY = "Fraudulent evasion of agricultural levy"
-    OBSTRUCTING_ENGINE_OR_CARRIAGE_ON_RAILWAY = "Obstructing engine or carriage on railway"
+    OBSTRUCTING_ENGINE_OR_CARRIAGE_ON_RAILWAY = (
+        "Obstructing engine or carriage on railway"
+    )
 
 
 class PNCId:
