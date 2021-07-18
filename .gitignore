@@ -127,3 +127,14 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# IDE config files
+.idea/
+.vs/
+.vscode/
+
+# Mac
+.DS_Store
+
+# pytest
+pytest.ini

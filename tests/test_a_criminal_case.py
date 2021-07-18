@@ -1,0 +1,2 @@
+class TestACriminalCase:
+    pass
