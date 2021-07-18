@@ -24,9 +24,12 @@ Open the newly checked out project in your IDE (point it at the top-level projec
 Install the requirements from requirements.txt
 Then check you can execute all the tests with the click of a single mouse
 button, or ideally a single keyboard shortcut.
+Make sure you are running the tests with `pytest` instead of the default `unittest`
 
-Additionally, you can run the tests from the command line. Open a terminal and change to the
-top-level project directory. Then run the command `pytest tests/`.
+Additionally, you can run the tests from the command line.
+Open a terminal and change to the top-level project directory.
+Then run the command `pytest`.
+
 You ought to see your tests running, and all but one of the tests run successfully.
 
 The failing test is where we will start exercise one.
