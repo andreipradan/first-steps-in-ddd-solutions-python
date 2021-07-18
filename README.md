@@ -20,7 +20,9 @@ classes found in `src/justice_app.py` (e.g. `PoliceInvestigation`, `PNCId`, `Sus
 The training relies entirely on your writing unit tests (ideally you use test-driven development),
 so you want to be able to run them very quickly.
 
-Open the newly checked out project in your IDE (point it at the top-level project directory). Then check you can execute all the tests with the click of a single mouse
+Open the newly checked out project in your IDE (point it at the top-level project directory).
+Install the requirements from requirements.txt
+Then check you can execute all the tests with the click of a single mouse
 button, or ideally a single keyboard shortcut.
 
 Additionally, you can run the tests from the command line. Open a terminal and change to the
