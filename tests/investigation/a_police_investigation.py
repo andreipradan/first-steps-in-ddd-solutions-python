@@ -1,9 +1,9 @@
 import pytest
 
-from src.justice_app import CriminalOffence
-from src.justice_app import PNCId
-from src.justice_app import PoliceInvestigation
-from src.justice_app import Suspect
+from src.investigation import CriminalOffence
+from src.investigation import Suspect
+from src.investigation import PNCId
+from src.investigation import PoliceInvestigation
 
 
 class TestAPoliceInvestigation:

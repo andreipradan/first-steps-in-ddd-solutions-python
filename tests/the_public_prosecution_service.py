@@ -1,8 +1,8 @@
-from src.justice_app import CriminalOffence
-from src.justice_app import PoliceInvestigation
+from src.investigation import CriminalOffence
+from src.investigation import PoliceInvestigation
+from src.investigation import PNCId
+from src.investigation import Suspect
 from src.justice_app import PublicProsecutionService
-from src.justice_app import PNCId
-from src.justice_app import Suspect
 
 
 class TestThePublicProsecutionService:

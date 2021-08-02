@@ -1,7 +1,7 @@
-from src.justice_app import CriminalOffence
-from src.justice_app import OffenceAdvice
-from src.justice_app import PreChargeDecision
-from src.justice_app import Suspect
+from src.investigation import CriminalOffence
+from src.investigation import OffenceAdvice
+from src.investigation import PreChargeDecision
+from src.investigation import Suspect
 
 
 class TestAPreChargeDecision:
