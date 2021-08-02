@@ -2,7 +2,7 @@ from src.investigation import CriminalOffence
 from src.investigation import PoliceInvestigation
 from src.investigation import PNCId
 from src.investigation import Suspect
-from src.justice_app import PublicProsecutionService
+from src.justice_app import PublicProsecutionService, Defendant, PoliceCaseFile
 
 
 class TestThePublicProsecutionService:
@@ -23,9 +23,9 @@ class TestThePublicProsecutionService:
 
     def test_should_create_a_criminal_case_when_a_police_case_file_is_accepted(self):
         defendant = Defendant()
-        police_case_file = PoliceCaseFile(pnc_id, defendant)
+        police_case_file = PoliceCaseFile(self.pnc_id, defendant)
 
-        criminal_case = the_pps.accept_case_file(police_case_file)
+        criminal_case = self.the_pps.accept_case_file(police_case_file)
 
-        assert pnc_id == criminal_case.pnc_id
+        assert self.pnc_id == criminal_case.pnc_id
         assert police_case_file.defendants == criminal_case.defendants
