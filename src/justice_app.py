@@ -1,10 +1,6 @@
 from enum import Enum
 
 
-class CriminalCase:
-    pass
-
-
 class CriminalOffence(Enum):
     # List from https://www.cps.gov.uk/sites/default/files/
     # documents/publications/annex_1a_table_of_offences_scheme_c.pdf
@@ -37,6 +33,12 @@ class Suspect:
         self.offence = offence
 
 
+class CriminalCase:
+    def __init__(self, pnc_id: PNCId, suspects: set[Suspect]):
+        self.pnc_id = pnc_id
+        self.suspects = suspects
+
+
 class PoliceInvestigation:
     def __init__(self, pnc_id: PNCId, suspect: Suspect):
         if not pnc_id:
@@ -58,3 +60,10 @@ class PreChargeDecision:
             self, suspect: Suspect, advice: OffenceAdvice
     ):
         self.offence_advice[suspect] = advice
+
+
+class PublicProsecutionService:
+    def receive_request_for_pre_charge_decision(
+        self, police_investigation: PoliceInvestigation
+    ):
+        return CriminalCase(police_investigation.pnc_id, police_investigation.suspects)

@@ -1,5 +1,6 @@
 from src.justice_app import CriminalOffence
 from src.justice_app import PoliceInvestigation
+from src.justice_app import PublicProsecutionService
 from src.justice_app import PNCId
 from src.justice_app import Suspect
 
