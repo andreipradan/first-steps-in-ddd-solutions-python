@@ -12,14 +12,13 @@ class TestThePublicProsecutionService:
         self.police_investigation = PoliceInvestigation(self.pnc_id, suspect)
         self.the_pps = PublicProsecutionService()
 
-    def test_should_create_a_case_when_receiving_a_pcd_request(self):
+    def test_should_create_a_pre_charge_decision_case_when_receiving_a_pcd_request(
+        self,
+    ):
+        pcd_case = self.the_pps.receive_request_for_pre_charge_decision(self.police_investigation)
 
-        police_case = self.the_pps.receive_request_for_pre_charge_decision(
-            self.police_investigation
-        )
-
-        assert self.pnc_id == police_case.pnc_id
-        assert self.police_investigation.suspects == police_case.suspects
+        assert self.pnc_id == pcd_case.pnc_id
+        assert self.police_investigation.suspects == pcd_case.get_suspects()
 
     def test_should_create_a_criminal_case_when_a_police_case_file_is_accepted(self):
         defendant = Defendant()

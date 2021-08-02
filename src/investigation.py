@@ -44,13 +44,17 @@ class PoliceInvestigation:
 
 
 class PreChargeDecision:
-    def __init__(self):
-        self.offence_advice = {}
+    def __init__(self, pnc_id: PNCId, suspects: set[Suspect]):
+        self.offence_advice = {suspect: None for suspect in suspects}
+        self.pnc_id = pnc_id
 
     def get_offence_advice_for(self, suspect: Suspect):
         return self.offence_advice.get(suspect)
 
+    def get_suspects(self):
+        return self.offence_advice.keys()
+
     def record_alternative_offensive_advice(
-            self, suspect: Suspect, advice: OffenceAdvice
+        self, suspect: Suspect, advice: OffenceAdvice
     ):
         self.offence_advice[suspect] = advice
