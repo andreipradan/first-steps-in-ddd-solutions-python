@@ -6,7 +6,7 @@ This is the starter project for the exercises in the "First Steps in Domain-Driv
 You should be able to fork and then clone this repo to get an almost-empty python project ready to work with.
 
 ## Pre-requisites
-* python 3.7+
+* python 3.9.6+
 * pytest 6.2.4+ (`pip install -r requirements.txt`)
 * IDE of your choice
 * Git client (unless you already have one in your IDE)
