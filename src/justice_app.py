@@ -1,5 +1,5 @@
 from src.investigation import PoliceInvestigation
-from src.investigation import PreChargeDecision
+from src.investigation import PreChargeDecisionCase
 from src.preparation import CriminalCase
 from src.preparation import PoliceCaseFile
 
@@ -11,6 +11,6 @@ class PublicProsecutionService:
     def receive_request_for_pre_charge_decision(
         self, police_investigation: PoliceInvestigation
     ):
-        return PreChargeDecision(
+        return PreChargeDecisionCase(
             police_investigation.pnc_id, police_investigation.suspects
         )

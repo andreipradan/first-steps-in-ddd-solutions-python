@@ -43,7 +43,7 @@ class PoliceInvestigation:
         self.suspects = {suspect}
 
 
-class PreChargeDecision:
+class PreChargeDecisionCase:
     def __init__(self, pnc_id: PNCId, suspects: set[Suspect]):
         self.offence_advice = {suspect: None for suspect in suspects}
         self.pnc_id = pnc_id
