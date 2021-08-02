@@ -7,6 +7,7 @@ You should be able to fork and then clone this repo to get an almost-empty pytho
 
 ## Pre-requisites
 * python 3.7+
+* pytest 6.2.4+ (`pip install -r requirements.txt`)
 * IDE of your choice
 * Git client (unless you already have one in your IDE)
 
