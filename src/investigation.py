@@ -33,7 +33,7 @@ class PNCId:
         self.value = value
 
 
-class PoliceInvestigation:
+class PoliceInvestigationDetails:
     def __init__(self, pnc_id: PNCId, suspect: Suspect):
         if not pnc_id:
             raise ValueError("You must provide a PNC Id")

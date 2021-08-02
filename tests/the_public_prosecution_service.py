@@ -1,5 +1,5 @@
 from src.investigation import CriminalOffence
-from src.investigation import PoliceInvestigation
+from src.investigation import PoliceInvestigationDetails
 from src.investigation import PNCId
 from src.investigation import Suspect
 from src.justice_app import PublicProsecutionService
@@ -11,7 +11,7 @@ class TestThePublicProsecutionService:
     def setup(self):
         suspect = Suspect(CriminalOffence.CUTTING_AWAY_BUOYS_ETC)
         self.pnc_id = PNCId("AN-ID")
-        self.police_investigation = PoliceInvestigation(self.pnc_id, suspect)
+        self.police_investigation = PoliceInvestigationDetails(self.pnc_id, suspect)
         self.the_pps = PublicProsecutionService()
 
     def test_should_create_a_pre_charge_decision_case_when_receiving_a_pcd_request(

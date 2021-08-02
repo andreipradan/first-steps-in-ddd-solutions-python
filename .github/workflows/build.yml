@@ -5,9 +5,9 @@ name: Build
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, solution-changesets ]
   pull_request:
-    branches: [ main ]
+    branches: [ main, solution-changesets ]
 
 jobs:
   build:
