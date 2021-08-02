@@ -52,9 +52,9 @@ class PreChargeDecision:
         self.offence_advice = {}
 
     def get_offence_advice_for(self, suspect: Suspect):
-        pass
+        return self.offence_advice.get(suspect)
 
     def record_alternative_offensive_advice(
             self, suspect: Suspect, advice: OffenceAdvice
     ):
-        pass
+        self.offence_advice[suspect] = advice
