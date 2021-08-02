@@ -1,22 +1,7 @@
-from src.investigation import PNCId
 from src.investigation import PoliceInvestigation
 from src.investigation import PreChargeDecision
-
-
-class Defendant:
-    pass
-
-
-class CriminalCase:
-    def __init__(self, pnc_id: PNCId, defendants: set[Defendant]):
-        self.pnc_id = pnc_id
-        self.defendants = defendants
-
-
-class PoliceCaseFile:
-    def __init__(self, pnc_id: PNCId, defendant: Defendant):
-        self.pnc_id = pnc_id
-        self.defendants = {defendant}
+from src.preparation import CriminalCase
+from src.preparation import PoliceCaseFile
 
 
 class PublicProsecutionService:

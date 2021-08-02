@@ -2,7 +2,9 @@ from src.investigation import CriminalOffence
 from src.investigation import PoliceInvestigation
 from src.investigation import PNCId
 from src.investigation import Suspect
-from src.justice_app import PublicProsecutionService, Defendant, PoliceCaseFile
+from src.justice_app import PublicProsecutionService
+from src.preparation import Defendant
+from src.preparation import PoliceCaseFile
 
 
 class TestThePublicProsecutionService:
@@ -15,7 +17,9 @@ class TestThePublicProsecutionService:
     def test_should_create_a_pre_charge_decision_case_when_receiving_a_pcd_request(
         self,
     ):
-        pcd_case = self.the_pps.receive_request_for_pre_charge_decision(self.police_investigation)
+        pcd_case = self.the_pps.receive_request_for_pre_charge_decision(
+            self.police_investigation
+        )
 
         assert self.pnc_id == pcd_case.pnc_id
         assert self.police_investigation.suspects == pcd_case.get_suspects()
