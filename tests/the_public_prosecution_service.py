@@ -20,3 +20,12 @@ class TestThePublicProsecutionService:
 
         assert self.pnc_id == police_case.pnc_id
         assert self.police_investigation.suspects == police_case.suspects
+
+    def test_should_create_a_criminal_case_when_a_police_case_file_is_accepted(self):
+        defendant = Defendant()
+        police_case_file = PoliceCaseFile(pnc_id, defendant)
+
+        criminal_case = the_pps.accept_case_file(police_case_file)
+
+        assert pnc_id == criminal_case.pnc_id
+        assert police_case_file.defendants == criminal_case.defendants
