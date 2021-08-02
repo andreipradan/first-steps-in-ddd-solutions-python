@@ -35,13 +35,12 @@ class Suspect:
 
 class PoliceInvestigation:
     def __init__(self, pnc_id: PNCId, suspect: Suspect):
-        self.suspects = []
         if not pnc_id:
             raise ValueError("You must provide a PNC Id")
         if not suspect:
             raise ValueError("You must provide a suspect")
         self.pnc_id = pnc_id
-        self.suspects.append(suspect)
+        self.suspects = {suspect}
 
 
 class PreChargeDecision:
