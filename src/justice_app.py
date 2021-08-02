@@ -23,6 +23,10 @@ class CriminalOffence(Enum):
     )
 
 
+class OffenceAdvice:
+    pass
+
+
 class PNCId:
     def __init__(self, value: str):
         self.value = value
@@ -44,4 +48,13 @@ class PoliceInvestigation:
 
 
 class PreChargeDecision:
-    pass
+    def __init__(self):
+        self.offence_advice = {}
+
+    def get_offence_advice_for(self, suspect: Suspect):
+        pass
+
+    def record_alternative_offensive_advice(
+            self, suspect: Suspect, advice: OffenceAdvice
+    ):
+        pass
