@@ -58,3 +58,12 @@ class PreChargeDecisionCase:
         self, suspect: Suspect, advice: OffenceAdvice
     ):
         self.offence_advice[suspect] = advice
+
+
+class PreChargeDecisionService:
+    def receive_request_for_pre_charge_decision(
+        self, police_investigation: PoliceInvestigationDetails
+    ):
+        return PreChargeDecisionCase(
+            police_investigation.pnc_id, police_investigation.suspects
+        )
